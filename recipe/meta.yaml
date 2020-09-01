@@ -1,17 +1,17 @@
 {% set name = "mcculw" %}
-{% set version = "0.9.8" %}
+{% set version = "1.0.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: d88d4271cf94a0cca8682a7fe08218a70ea68016ecff5211ac36d2ce5d292737
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 233e0146798c184c02250ed2a9518642c924c09da4b826ba0014244e76198665
 
 build:
-  number: 1
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv
   skip: true  # [not win]
 
 requirements:
@@ -29,12 +29,12 @@ test:
     - mcculw
 
 about:
-  home: "http://www.mccdaq.com"
+  home: http://www.mccdaq.com
   license: MIT
   license_family: MIT
   license_file: LICENCE
-  summary: "MCC Universal Library Python API for Windows"
-  dev_url: "https://github.com/mccdaq/mcculw"
+  summary: MCC Universal Library Python API for Windows
+  dev_url: https://github.com/mccdaq/mcculw
 
 extra:
   recipe-maintainers:
