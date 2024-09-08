@@ -18,6 +18,7 @@ requirements:
   host:
     - pip
     - python
+    - setuptools
   run:
     - python
     - aenum =2.0.8  # [py<36]
